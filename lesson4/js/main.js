@@ -67,21 +67,35 @@ if (budgetDay>=1200) {
 
 
 money = +prompt('Ваш месячный доход?', 45000);
-let getExpensesMonth = function(a, b, callback) {
-    if(typeof a==='number' && typeof b==='number') {
-        callback(a, b);
-    }
+
+
+// let getExpensesMonth = function(a, b, callback) {
+//     if(typeof a==='number' && typeof b==='number') {
+//         callback(a, b);
+//     }
+// };
+
+// getExpensesMonth(amount1, amount2, function(a, b){
+//     console.log(a+b);
+//     returm
+// });
+
+// let getAccumulatedMonth = function(a, b) {
+//     return a-b;
+// }    
+
+// console.log(getAccumulatedMonth(money, getExpensesMonth));
+
+
+
+let getExpensesMonth = function(a, b) {
+    return a+b;
 };
 
-getExpensesMonth(amount1, amount2, function(a, b){
-    console.log(a+b);
-});
+console.log(getExpensesMonth(amount1, amount2));
 
 let getAccumulatedMonth = function(a, b) {
     return a-b;
-}    
+};
 
 console.log(getAccumulatedMonth(money, getExpensesMonth));
-
-
-
