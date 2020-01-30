@@ -46,7 +46,7 @@ console.log(`Бюджет на день ${budgetDay}`);
 
 let showTypeOf = function(data) {
    console.log(data, typeof(data));
-}
+};
 
 showTypeOf(income);
 showTypeOf(deposit);
@@ -62,6 +62,6 @@ let getStatusIncome = function() {
     } else if (budgetDay<600) {
         console.log('К сожалению у вас уровень дохода ниже среднего');
     }  
-}
+};
 
 getStatusIncome();
