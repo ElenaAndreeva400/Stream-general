@@ -29,8 +29,6 @@ let getAccumulatedMonth = function(a, b) {
     return a-b;
 };
 
-console.log(getAccumulatedMonth(money, getExpensesMonth(amount1, amount2)));
-
 let accumulatedMonth = getAccumulatedMonth(money, getExpensesMonth(amount1, amount2));
 
 function getTargetMonth(accuMonth) {
@@ -41,7 +39,7 @@ function getTargetMonth(accuMonth) {
     return time;
 } 
 
-console.log(getTargetMonth(accumulatedMonth));
+getTargetMonth(accumulatedMonth);
 
 let budgetDay = Math.floor(accumulatedMonth/30);
 console.log(`Бюджет на день ${budgetDay}`);
