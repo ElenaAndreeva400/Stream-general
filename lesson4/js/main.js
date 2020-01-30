@@ -46,26 +46,24 @@ console.log(getTargetMonth(accumulatedMonth));
 let budgetDay = Math.floor(accumulatedMonth/30);
 console.log(`Бюджет на день ${budgetDay}`);
 
-if (budgetDay>=1200) {
-    console.log('У Вас высокий уровень дохода');
-} else if (budgetDay>=600) {
-    console.log('У вас средний уровень дохода');
-} else if (budgetDay<0) {
-    console.log('Что-то пошло не так');
-} else if (budgetDay<600) {
-    console.log('К сожалению у вас уровень дохода ниже среднего');
-}  
-
 let showTypeOf = function(data) {
-   console.log(typeof data);
+   console.log(data, typeof(data));
 }
 
 showTypeOf(income);
 showTypeOf(deposit);
 showTypeOf(money);
 
-let getStatusIncome = function(accuMon, days) {
-    return accuMon/30 * days;
+let getStatusIncome = function() {
+    if (budgetDay>=1200) {
+        console.log('У Вас высокий уровень дохода');
+    } else if (budgetDay>=600) {
+        console.log('У вас средний уровень дохода');
+    } else if (budgetDay<0) {
+        console.log('Что-то пошло не так');
+    } else if (budgetDay<600) {
+        console.log('К сожалению у вас уровень дохода ниже среднего');
+    }  
 }
 
-console.log(getStatusIncome(accumulatedMonth, 130));
+getStatusIncome();
