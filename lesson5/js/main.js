@@ -12,11 +12,10 @@ let money = 45000,
     period = 12;
 
 let start = function() {
-    do { money = +prompt('Ваш месячный доход?'); }
-      while (!isNumber(money)) {
-        money = prompt('Ваш месячный доход?');
-    }
-} 
+    do { 
+        money = +prompt('Ваш месячный доход?'); 
+    } while (!isNumber(money));
+}; 
 
 start();
 
@@ -34,7 +33,7 @@ let getExpensesMonth = function() {
     }
     console.log(expenses);
     return sum;
-}    
+};    
 
 let expensesAmount = getExpensesMonth();
 console.log('Расходы за месяц: ', expensesAmount);
