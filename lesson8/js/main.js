@@ -15,11 +15,7 @@ let isNumber = function(num) {
 };
 
 let isString = function(str) {
-  return (str && str.length !== 0 && (/^[a-zа-яё]+$/i.test(str)));  
-};
-
-let beautyString = function(str) {
-  str = str.ucFirst();
+  return (str && str.length !== 0 && (/^[а-яё\s]+$/i.test(str)));  
 };
 
 let appData = {
@@ -41,7 +37,8 @@ let appData = {
           if(confirm('Есть ли у Вас дополнительный источник заработка?')) {     // дополнительный источник заработка 
             let itemIncome;
             do {
-              itemIncome = prompt('Какой у Вас дополнительный заработок?', 'Вышиваю');
+              itemIncome = prompt('Какой у Вас дополнительный заработок?', 'Вышиваю крестиком');
+              //console.log(itemIncome);
             } while (!isString(itemIncome));                                    // проверка на строку
 
             let cashIncome=0;
@@ -52,17 +49,17 @@ let appData = {
           }
 
           appData.addExpenses = prompt(`Перечислите возможные расходы за рассчитываемый период через запятую?`)
-          .toLowerCase().split(" "); // при помощи split(" ") разбиваем строку на массив 
+          .toLowerCase(); // при помощи split(" ") разбиваем строку на массив 
           //строк путем разделения строки указанной подстрокой
 
           let addExpensesUCFirst = function() {   //  Возможные расходы (addExpenses) с заглавной буквы
-
+            let ucAddExpenses = appData.addExpenses.split(" ");
             let stringAddExpenses = '';  // так как строки в JavaScript неизменяемы.
 
             // нужно пересоздать строку на основе существующей, с заглавным первым символом:
 
-            for (let i = 0; i < appData.addExpenses.length; i++) {
-              let Name = appData.addExpenses[i];
+            for (let i = 0; i < ucAddExpenses.length; i++) {
+              let Name = ucAddExpenses[i];
               let First = Name.substring(0, 1).toUpperCase();
               let Leftovers = Name.substring(1, Name.length);
               stringAddExpenses += First + Leftovers + " ";
@@ -141,7 +138,8 @@ appData.getExpensesMonth();  // 1_1
 appData.getBudget();  //2
 appData.getTargetMonth();    //3
 appData.getStatusIncome();  // 5
-
+appData.getInfoDeposit();
+console.log(appData.percentDeposit, appData.moneyDeposit, appData.calcSavedMoney());
 
 //-----------------------------------------
 let appDataInfo = function(appData) {
@@ -154,5 +152,4 @@ let appDataInfo = function(appData) {
 appDataInfo(appData);
 
 //------------------------------------------
-appData.getInfoDeposit();
-console.log(appData.percentDeposit, appData.moneyDeposit, appData.calcSavedMoney());
+
