@@ -41,7 +41,7 @@ let appData = {
           if(confirm('Есть ли у Вас дополнительный источник заработка?')) {     // дополнительный источник заработка 
             let itemIncome;
             do {
-              itemIncome = prompt('Какой у Вас дополнительный заработок?', 'Вышиваю крестиком');
+              itemIncome = prompt('Какой у Вас дополнительный заработок?', 'Вышиваю');
             } while (!isString(itemIncome));                                    // проверка на строку
 
             let cashIncome=0;
@@ -52,16 +52,19 @@ let appData = {
           }
 
           appData.addExpenses = prompt(`Перечислите возможные расходы за рассчитываемый период через запятую?`)
-          .toLowerCase().split(" ");
+          .toLowerCase().split(" "); // при помощи split(" ") разбиваем строку на массив 
+          //строк путем разделения строки указанной подстрокой
 
           let addExpensesUCFirst = function() {   //  Возможные расходы (addExpenses) с заглавной буквы
 
-            let stringAddExpenses = '';
+            let stringAddExpenses = '';  // так как строки в JavaScript неизменяемы.
+
+            // нужно пересоздать строку на основе существующей, с заглавным первым символом:
 
             for (let i = 0; i < appData.addExpenses.length; i++) {
               let Name = appData.addExpenses[i];
               let First = Name.substring(0, 1).toUpperCase();
-              let Leftovers = Name.substring(1, Name.length)
+              let Leftovers = Name.substring(1, Name.length);
               stringAddExpenses += First + Leftovers + " ";
             }
             console.log(stringAddExpenses);
