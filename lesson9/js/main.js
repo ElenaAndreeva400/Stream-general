@@ -27,59 +27,53 @@ console.log(addIncomeItem2);
 // "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
 
 // получаем каждый input в отдельную переменную
-const rightInputs1 = document.querySelectorAll(".result-total")[0];
-console.log(rightInputs1);
-const rightInputs2 = document.querySelectorAll(".result-total")[1];
-console.log(rightInputs2);
-const rightInputs3 = document.querySelectorAll(".result-total")[2];
-console.log(rightInputs3);
-const rightInputs4 = document.querySelectorAll(".result-total")[3];
-console.log(rightInputs4);
-const rightInputs5 = document.querySelectorAll(".result-total")[4];
-console.log(rightInputs5);
-const rightInputs6 = document.querySelectorAll(".result-total")[5];
-console.log(rightInputs6);
-const rightInputs7 = document.querySelectorAll(".result-total")[6]; 
-console.log(rightInputs7);
+const resultTotal1 = document.querySelectorAll(".result-total")[0];
+console.log(resultTotal1);
+const resultTotal2 = document.querySelectorAll(".result-total")[1];
+console.log(resultTotal2);
+const resultTotal3 = document.querySelectorAll(".result-total")[2];
+console.log(resultTotal3);
+const resultTotal4 = document.querySelectorAll(".result-total")[3];
+console.log(resultTotal4);
+const resultTotal5 = document.querySelectorAll(".result-total")[4];
+console.log(resultTotal5);
+const resultTotal6 = document.querySelectorAll(".result-total")[5];
+console.log(resultTotal6);
+const resultTotal7 = document.querySelectorAll(".result-total")[6]; 
+console.log(resultTotal7);
 
 
 
 // f Оставшиеся поля через querySelector каждый в отдельную переменную:
 //поля ввода (input) с левой стороны и не забудьте про range.
-const leftSideDiv = document.querySelector(".data"); // возвращает список всех дочерних элементов с их потомками
 
-//const leftSideDiv = document.querySelectorAll(".data div"); 
-console.log(leftSideDiv);
-// const leftInputs = leftSideDiv.querySelectorAll("input");
-// console.log(leftInputs);
-
-const leftInputs1 = leftSideDiv.querySelectorAll("input")[0];
+const leftInputs1 = document.querySelector(".salary-amount");
 console.log(leftInputs1);
-const leftInputs2 = leftSideDiv.querySelectorAll("input")[1];
+const leftInputs2 = document.querySelector(".income-title");
 console.log(leftInputs2);
-const leftInputs3 = leftSideDiv.querySelectorAll("input")[2];
+const leftInputs3 = document.querySelector(".income-amount");
 console.log(leftInputs3);
-const leftInputs4 = leftSideDiv.querySelectorAll("input")[3];
+const leftInputs4 = document.querySelectorAll(".additional_income-item")[0];
 console.log(leftInputs4);
-const leftInputs5 = leftSideDiv.querySelectorAll("input")[4];
+const leftInputs5 = document.querySelectorAll(".additional_income-item")[1];
 console.log(leftInputs5);
-const leftInputs6 = leftSideDiv.querySelectorAll("input")[5];
+const leftInputs6 = document.querySelector(".expenses-title");
 console.log(leftInputs6);
-const leftInputs7 = leftSideDiv.querySelectorAll("input")[6];
+const leftInputs7 = document.querySelector(".expenses-amount");
 console.log(leftInputs7);
-const leftInputs8 = leftSideDiv.querySelectorAll("input")[7];
+const leftInputs8 = document.querySelector(".additional_expenses-item");
 console.log(leftInputs8);
-const leftInputs9 = leftSideDiv.querySelectorAll("input")[8];
+const leftInputs9 = document.querySelector("#deposit-check");
 console.log(leftInputs9);
-const leftInputs10 = leftSideDiv.querySelectorAll("input")[9];
+const leftInputs10 = document.querySelector(".deposit-amount");
 console.log(leftInputs10);
-const leftInputs11 = leftSideDiv.querySelectorAll("input")[10];
+const leftInputs11 = document.querySelector(".deposit-percent");
 console.log(leftInputs11);
-const leftInputs12 = leftSideDiv.querySelectorAll("input")[11];
+const leftInputs12 = document.querySelector(".target-amount");
 console.log(leftInputs12);
-const leftInputs13 = leftSideDiv.querySelectorAll("input")[12];
+const leftInputs13 = document.querySelector(".period-select");
 console.log(leftInputs13);
 
 
-const leftRanges = leftSideDiv.querySelectorAll('[type="range"]');
+const leftRanges = document.querySelector('[type="range"]');
 console.log(leftRanges);
