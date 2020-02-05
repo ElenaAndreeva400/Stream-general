@@ -34,7 +34,7 @@ console.log(rightInputs);
 //поля ввода (input) с левой стороны и не забудьте про range.
 const leftSideDiv = document.querySelector(".data"); // возвращает список всех дочерних элементов с их потомками
 
-//const leftSideDiv = document.querySelector(".data div"); // так возвращает ближайший вложенный элемент (с его потомками), а не все дочерние
+//const leftSideDiv = document.querySelectorAll(".data div"); 
 console.log(leftSideDiv);
 const leftInputs = leftSideDiv.querySelectorAll("input");
 console.log(leftInputs);
