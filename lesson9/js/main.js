@@ -23,13 +23,42 @@ console.log(addIncomeItem1);
 let addIncomeItem2 = document.querySelectorAll(".additional_income-item")[1];
 console.log(addIncomeItem2);
 
-// Каждый элемент в правой части программы через класс, которые имеют в имени класса
+// е Каждый элемент в правой части программы через класс, которые имеют в имени класса
 // "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
+// получаем div контейнер
 const rightSideDiv = document.querySelector(".result");
 // получаем все искомые inputs с окончанием _value
-const rightInputs = rightSideDiv.querySelectorAll(".result-total"); 
+const rightInputs = rightSideDiv.querySelectorAll(".result-total"), 
+// или
+//const rightInputs = document.querySelectorAll("input.result-total"),
+// получаем каждый input в отдельную переменную
+rightInputs1 = document.querySelectorAll(".result-total")[0];
+console.log(rightInputs1);
+const rightInputs2 = rightSideDiv.querySelectorAll(".result-total")[1];
+console.log(rightInputs1);
+const rightInputs3 = rightSideDiv.querySelectorAll(".result-total")[2];
+console.log(rightInputs1);
+const rightInputs4 = rightSideDiv.querySelectorAll(".result-total")[3];
+console.log(rightInputs1);
+const rightInputs5 = rightSideDiv.querySelectorAll(".result-total")[4];
+console.log(rightInputs1);
+const rightInputs6 = rightSideDiv.querySelectorAll(".result-total")[5];
+console.log(rightInputs1);
+const rightInputs7 = rightSideDiv.querySelectorAll(".result-total")[6]; 
+console.log(rightInputs1);
 console.log(rightInputs);
 
+console.log(rightInputs1 + " " + rightInputs2 + " " + rightInputs3 + " "+ rightInputs4 + " " + rightInputs5 + " " + rightInputs6 + " " + rightInputs7);
+
+
+//-----------------
+
+
+// const allInputs = document.querySelectorAll('class*=value').innerHTML;
+// console.log(allInputs);
+
+//var text = document.querySelector('div[SomeText*]').innerTEXT;
+//---------------------------
 // f Оставшиеся поля через querySelector каждый в отдельную переменную:
 //поля ввода (input) с левой стороны и не забудьте про range.
 const leftSideDiv = document.querySelector(".data"); // возвращает список всех дочерних элементов с их потомками
