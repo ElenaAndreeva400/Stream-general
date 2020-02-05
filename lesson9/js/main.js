@@ -51,14 +51,6 @@ console.log(rightInputs);
 console.log(rightInputs1 + " " + rightInputs2 + " " + rightInputs3 + " "+ rightInputs4 + " " + rightInputs5 + " " + rightInputs6 + " " + rightInputs7);
 
 
-//-----------------
-
-
-// const allInputs = document.querySelectorAll('class*=value').innerHTML;
-// console.log(allInputs);
-
-//var text = document.querySelector('div[SomeText*]').innerTEXT;
-//---------------------------
 // f Оставшиеся поля через querySelector каждый в отдельную переменную:
 //поля ввода (input) с левой стороны и не забудьте про range.
 const leftSideDiv = document.querySelector(".data"); // возвращает список всех дочерних элементов с их потомками
