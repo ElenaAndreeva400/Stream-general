@@ -27,20 +27,20 @@ console.log(addIncomeItem2);
 // "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
 
 // получаем каждый input в отдельную переменную
-const resultTotal1 = document.querySelectorAll(".result-total")[0];
-console.log(resultTotal1);
-const resultTotal2 = document.querySelectorAll(".result-total")[1];
-console.log(resultTotal2);
-const resultTotal3 = document.querySelectorAll(".result-total")[2];
-console.log(resultTotal3);
-const resultTotal4 = document.querySelectorAll(".result-total")[3];
-console.log(resultTotal4);
-const resultTotal5 = document.querySelectorAll(".result-total")[4];
-console.log(resultTotal5);
-const resultTotal6 = document.querySelectorAll(".result-total")[5];
-console.log(resultTotal6);
-const resultTotal7 = document.querySelectorAll(".result-total")[6]; 
-console.log(resultTotal7);
+const budgetMonthValue = document.querySelector(".budget_month-value");
+console.log(budgetMonthValue);
+const budgetDayValue = document.querySelector(".budget_day-value");
+console.log(budgetDayValue);
+const expensesMonthValue = document.querySelector(".expenses_month-value");
+console.log(expensesMonthValue);
+const additionalIncomeValue = document.querySelector(".additional_income-value");
+console.log(additionalIncomeValue);
+const additionalExpensesValue = document.querySelector(".additional_expenses-value");
+console.log(additionalExpensesValue);
+const incomePeriodValue = document.querySelector(".income_period-value");
+console.log(incomePeriodValue);
+const targetMonthValue = document.querySelector(".target_month-value"); 
+console.log(targetMonthValue);
 
 
 
@@ -71,9 +71,5 @@ const depositPercent = document.querySelector(".deposit-percent");
 console.log(depositPercent);
 const targetAmount = document.querySelector(".target-amount");
 console.log(targetAmount);
-const periodSelect = document.querySelector(".period-select");
-console.log(periodSelect);
-
-
 const leftRanges = document.querySelector('[type="range"]');
 console.log(leftRanges);
