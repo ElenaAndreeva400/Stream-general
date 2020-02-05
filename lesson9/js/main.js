@@ -50,7 +50,36 @@ const leftSideDiv = document.querySelector(".data"); // возвращает с�
 
 //const leftSideDiv = document.querySelectorAll(".data div"); 
 console.log(leftSideDiv);
-const leftInputs = leftSideDiv.querySelectorAll("input");
-console.log(leftInputs);
+// const leftInputs = leftSideDiv.querySelectorAll("input");
+// console.log(leftInputs);
+
+const leftInputs1 = leftSideDiv.querySelectorAll("input")[0];
+console.log(leftInputs1);
+const leftInputs2 = leftSideDiv.querySelectorAll("input")[1];
+console.log(leftInputs2);
+const leftInputs3 = leftSideDiv.querySelectorAll("input")[2];
+console.log(leftInputs3);
+const leftInputs4 = leftSideDiv.querySelectorAll("input")[3];
+console.log(leftInputs4);
+const leftInputs5 = leftSideDiv.querySelectorAll("input")[4];
+console.log(leftInputs5);
+const leftInputs6 = leftSideDiv.querySelectorAll("input")[5];
+console.log(leftInputs6);
+const leftInputs7 = leftSideDiv.querySelectorAll("input")[6];
+console.log(leftInputs7);
+const leftInputs8 = leftSideDiv.querySelectorAll("input")[7];
+console.log(leftInputs8);
+const leftInputs9 = leftSideDiv.querySelectorAll("input")[8];
+console.log(leftInputs9);
+const leftInputs10 = leftSideDiv.querySelectorAll("input")[9];
+console.log(leftInputs10);
+const leftInputs11 = leftSideDiv.querySelectorAll("input")[10];
+console.log(leftInputs11);
+const leftInputs12 = leftSideDiv.querySelectorAll("input")[11];
+console.log(leftInputs12);
+const leftInputs13 = leftSideDiv.querySelectorAll("input")[12];
+console.log(leftInputs13);
+
+
 const leftRanges = leftSideDiv.querySelectorAll('[type="range"]');
 console.log(leftRanges);
