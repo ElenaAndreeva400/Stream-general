@@ -1,7 +1,7 @@
 
 // кнопка "Рассчитать" через id
-let button = document.getElementById("start");
-console.log(button);
+let buttonStart = document.getElementById("start");
+console.log(buttonStart);
 // let button1 = document.querySelector('#start');
 // console.log(button1);
 
