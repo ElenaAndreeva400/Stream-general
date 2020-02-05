@@ -6,9 +6,9 @@ console.log(button);
 // console.log(button1);
 
 // Кнопки “+” (плюс) через Tag, каждую в своей переменной. 
-let buttonPlus1 = document.querySelectorAll(".btn_plus")[0];
+let buttonPlus1 = document.getElementsByTagName("button")[0];
 console.log(buttonPlus1);
-let buttonPlus2 = document.querySelectorAll(".btn_plus")[1];
+let buttonPlus2 = document.getElementsByTagName("button")[1];
 console.log(buttonPlus2);
 
 // Чекбокс по id через querySelector
@@ -25,30 +25,23 @@ console.log(addIncomeItem2);
 
 // е Каждый элемент в правой части программы через класс, которые имеют в имени класса
 // "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
-// получаем div контейнер
-const rightSideDiv = document.querySelector(".result");
-// получаем все искомые inputs с окончанием _value
-const rightInputs = rightSideDiv.querySelectorAll(".result-total"), 
-// или
-//const rightInputs = document.querySelectorAll("input.result-total"),
-// получаем каждый input в отдельную переменную
-rightInputs1 = document.querySelectorAll(".result-total")[0];
-console.log(rightInputs1);
-const rightInputs2 = rightSideDiv.querySelectorAll(".result-total")[1];
-console.log(rightInputs1);
-const rightInputs3 = rightSideDiv.querySelectorAll(".result-total")[2];
-console.log(rightInputs1);
-const rightInputs4 = rightSideDiv.querySelectorAll(".result-total")[3];
-console.log(rightInputs1);
-const rightInputs5 = rightSideDiv.querySelectorAll(".result-total")[4];
-console.log(rightInputs1);
-const rightInputs6 = rightSideDiv.querySelectorAll(".result-total")[5];
-console.log(rightInputs1);
-const rightInputs7 = rightSideDiv.querySelectorAll(".result-total")[6]; 
-console.log(rightInputs1);
-console.log(rightInputs);
 
-console.log(rightInputs1 + " " + rightInputs2 + " " + rightInputs3 + " "+ rightInputs4 + " " + rightInputs5 + " " + rightInputs6 + " " + rightInputs7);
+// получаем каждый input в отдельную переменную
+const rightInputs1 = document.querySelectorAll(".result-total")[0];
+console.log(rightInputs1);
+const rightInputs2 = document.querySelectorAll(".result-total")[1];
+console.log(rightInputs2);
+const rightInputs3 = document.querySelectorAll(".result-total")[2];
+console.log(rightInputs3);
+const rightInputs4 = document.querySelectorAll(".result-total")[3];
+console.log(rightInputs4);
+const rightInputs5 = document.querySelectorAll(".result-total")[4];
+console.log(rightInputs5);
+const rightInputs6 = document.querySelectorAll(".result-total")[5];
+console.log(rightInputs6);
+const rightInputs7 = document.querySelectorAll(".result-total")[6]; 
+console.log(rightInputs7);
+
 
 
 // f Оставшиеся поля через querySelector каждый в отдельную переменную:
