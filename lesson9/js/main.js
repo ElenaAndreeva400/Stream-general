@@ -47,32 +47,32 @@ console.log(resultTotal7);
 // f Оставшиеся поля через querySelector каждый в отдельную переменную:
 //поля ввода (input) с левой стороны и не забудьте про range.
 
-const leftInputs1 = document.querySelector(".salary-amount");
-console.log(leftInputs1);
-const leftInputs2 = document.querySelector(".income-title");
-console.log(leftInputs2);
-const leftInputs3 = document.querySelector(".income-amount");
-console.log(leftInputs3);
-const leftInputs4 = document.querySelectorAll(".additional_income-item")[0];
-console.log(leftInputs4);
-const leftInputs5 = document.querySelectorAll(".additional_income-item")[1];
-console.log(leftInputs5);
-const leftInputs6 = document.querySelector(".expenses-title");
-console.log(leftInputs6);
-const leftInputs7 = document.querySelector(".expenses-amount");
-console.log(leftInputs7);
-const leftInputs8 = document.querySelector(".additional_expenses-item");
-console.log(leftInputs8);
-const leftInputs9 = document.querySelector("#deposit-check");
-console.log(leftInputs9);
-const leftInputs10 = document.querySelector(".deposit-amount");
-console.log(leftInputs10);
-const leftInputs11 = document.querySelector(".deposit-percent");
-console.log(leftInputs11);
-const leftInputs12 = document.querySelector(".target-amount");
-console.log(leftInputs12);
-const leftInputs13 = document.querySelector(".period-select");
-console.log(leftInputs13);
+const salaryAmount = document.querySelector(".salary-amount");
+console.log(salaryAmount);
+const incomeTitle = document.querySelector(".income-title");
+console.log(incomeTitle);
+const incomeAmount = document.querySelector(".income-amount");
+console.log(incomeAmount);
+const additionalIncomeItem1 = document.querySelectorAll(".additional_income-item")[0];
+console.log(additionalIncomeItem1);
+const additionalIncomeItem2 = document.querySelectorAll(".additional_income-item")[1];
+console.log(additionalIncomeItem2);
+const expensesTitle = document.querySelector(".expenses-title");
+console.log(expensesTitle);
+const expensesAmount = document.querySelector(".expenses-amount");
+console.log(expensesAmount);
+const additionalExpensesItem = document.querySelector(".additional_expenses-item");
+console.log(additionalExpensesItem);
+const depositCheck = document.querySelector("#deposit-check");
+console.log(depositCheck);
+const depositAmount = document.querySelector(".deposit-amount");
+console.log(depositAmount);
+const depositPercent = document.querySelector(".deposit-percent");
+console.log(depositPercent);
+const targetAmount = document.querySelector(".target-amount");
+console.log(targetAmount);
+const periodSelect = document.querySelector(".period-select");
+console.log(periodSelect);
 
 
 const leftRanges = document.querySelector('[type="range"]');
