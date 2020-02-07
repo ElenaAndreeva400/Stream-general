@@ -13,10 +13,10 @@ let book = document.querySelectorAll('.book');
 // let bookFive = document.querySelectorAll('.book')[5];
 
 
-document.write(books.insertBefore(book[1], book[0]));
-document.write(books.insertBefore(book[4], book[2]));
-document.write(books.insertBefore(book[5], book[2]));
-document.write(books.insertBefore(book[3], book[5]));
+document.open(books.insertBefore(book[1], book[0]));
+document.open(books.insertBefore(book[4], book[2]));
+document.open(books.insertBefore(book[5], book[2]));
+document.open(books.insertBefore(book[3], book[5]));
 
 //-----------------------------------------
 
@@ -35,16 +35,16 @@ adv.remove();
 //------------------------------------------
 let ulFirst = document.querySelectorAll('.book')[1].querySelector('ul');
 
-console.log(ulFirst);
+//console.log(ulFirst);
 
 let liCollection = ulFirst.querySelectorAll('li');
-console.log(liCollection);
+//console.log(liCollection);
 
-document.write(ulFirst.insertBefore(liCollection[6], liCollection[4]));
+document.open(ulFirst.insertBefore(liCollection[6], liCollection[4]));
 
-document.write(ulFirst.insertBefore(liCollection[8], liCollection[4]));
+document.open(ulFirst.insertBefore(liCollection[8], liCollection[4]));
 
-document.write(ulFirst.insertBefore(liCollection[2], liCollection[10]));
+document.open(ulFirst.insertBefore(liCollection[2], liCollection[10]));
 
 //--------------------------------------------------
 
@@ -55,13 +55,13 @@ console.log(ulLast);
 let liUlLast = ulLast.querySelectorAll('li');
 console.log(liUlLast);
 
-document.write(ulLast.insertBefore(liUlLast[9], liUlLast[2]));
+document.open(ulLast.insertBefore(liUlLast[9], liUlLast[2]));
 
-document.write(ulLast.insertBefore(liUlLast[2], liUlLast[5]));
+document.open(ulLast.insertBefore(liUlLast[2], liUlLast[5]));
 
-document.write(ulLast.insertBefore(liUlLast[6], liUlLast[5]));
+document.open(ulLast.insertBefore(liUlLast[6], liUlLast[5]));
 
-document.write(ulLast.insertBefore(liUlLast[7], liUlLast[5]));
+document.open(ulLast.insertBefore(liUlLast[7], liUlLast[5]));
 
 //---------------------------------------
 
@@ -75,7 +75,7 @@ let liChapter8 = document.createElement('li');
 
 liChapter8.innerHTML = "Глава 8: За пределами ES6";
 
-document.write(ulBookSix.insertBefore(liChapter8, liBookSix[9]));
+document.open(ulBookSix.insertBefore(liChapter8, liBookSix[9]));
 
 
 
