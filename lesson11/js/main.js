@@ -84,6 +84,7 @@ let appData = {
           additionalExpensesValue.value = appData.addExpenses.join(', '); 
           additionalIncomeValue.value = appData.addIncome.join(', '); 
           targetMonthValue.value = appData.getTargetMonth();  
+          incomePeriodValue.value = appData.calcPeriod();
           periodSelect.addEventListener('input', function(){    
   
             incomePeriodValue.value = appData.calcPeriod();
@@ -138,7 +139,7 @@ let appData = {
                     appData.income[nameIncome] = +amountIncome;
               }
           });
-             //console.log(appData.incomeMonth);
+             
               for (let key in appData.income) {
                 appData.incomeMonth += +appData.income[key];  
               }
@@ -186,16 +187,16 @@ let appData = {
                 appData.moneyDeposit = prompt('Какая сумма заложена?', 10000);
               } while (!isNumber(appData.moneyDeposit));
           }
-  },
-    calcPeriod: function () {                 
-          return appData.budgetMonth * periodSelect.value;
-  },
+    },
     periodChange: function() {
             periodSelect.addEventListener('input', function() {
 
                periodAmount.textContent = periodSelect.value;  
             });
-  }
+    },
+    calcPeriod: function () {                 
+          return appData.budgetMonth * periodSelect.value;
+},
 };
 appData.blockStart();
 buttonStart.addEventListener('click', appData.start);
