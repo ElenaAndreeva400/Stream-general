@@ -13,8 +13,10 @@ let buttonStart = document.getElementById('start'),
     additionalExpensesValue = document.getElementsByClassName('additional_expenses-value')[0], 
     incomePeriodValue = document.querySelector('.income_period-value'), 
     targetMonthValue = document.getElementsByClassName('target_month-value')[0], 
-    salaryAmount = document.querySelector('.salary-amount'),  
+    salaryAmount = document.querySelector('.salary-amount'), 
+    income = document.querySelector('.income'), 
     incomeTitle = document.querySelector('.income-title'), 
+    expenses = document.querySelector('.expenses'),
     expensesTitle = document.querySelector('.expenses-title'),  
     expensesItems = document.querySelectorAll('.expenses-items'), 
     additionalExpenses = document.querySelector('.additional_expenses'),  
@@ -76,10 +78,7 @@ let appData = {
                            
                      });  
                                    
-              }
-
-       // document.addEventListener('click', this.getCancel);
-  
+              }  
    },
    blockStart: function() {
 
@@ -226,52 +225,50 @@ let appData = {
     reset: function() {
    
             if(event.target.closest('#cancel')){
-              this.budget = 0; 
-              console.log(this.budget);    
-              this.budgetDay=0; 
-              console.log(this.budgetDay);      
-              this.budgetMonth = 0;
-              console.log(this.budgetMonth);
-              this.expensesMonth = 0;
-              console.log(this.expensesMonth);
-              this.income = 0;  
-              console.log(this.income);    
-              this.income = {};  
-              console.log(this.income);    
-              this.incomeMonth = 0;
-              console.log(this.incomeMonth);
-              this.addIncome = 0;
-              console.log(this.addIncome);
-              this.addIncome = [];
-              console.log(this.addIncome);
-              this.expenses =0;
-              console.log(this.expenses);    
-              this.expenses = {}; 
-              console.log(this.expenses);     
-              this.addExpenses =0; 
-              console.log(this.addExpenses);     
-              this.addExpenses = [];
-              console.log(this.addExpenses);      
-              this.deposit = 0;
-              console.log(this.deposit);    
-              this.percentDeposit = 0;
-              console.log(this.percentDeposit);    
-              this.moneyDeposit = 0;
-              console.log(this.moneyDeposit);    
+              this.budget = 0;             
+              this.budgetDay=0;               
+              this.budgetMonth = 0;             
+              this.expensesMonth = 0;          
+              this.income = 0;              
+              this.income = {};               
+              this.incomeMonth = 0;             
+              this.addIncome = 0;            
+              this.addIncome = [];              
+              this.expenses =0;          
+              this.expenses = {};             
+              this.addExpenses =0;             
+              this.addExpenses = [];             
+              this.deposit = 0;           
+              this.percentDeposit = 0;              
+              this.moneyDeposit = 0;            
 
               inputs.forEach(item => {
                      item.removeAttribute('readonly');
                      item.value = '';
                      item.style.cssText =`cursor: default`;
                      });
-         
+
+              for(let i = 0; i < incomeItems.length; i++) {
+                     if(i !== 0) {
+                            income.removeChild(incomeItems[i]);
+                            }
+              }       
+
+              for(let i = 0; i < expensesItems.length; i++) {
+                     if(i !== 0) {
+                            expenses.removeChild(expensesItems[i]);
+                            }
+              }
+
+              periodAmount.textContent = 1;
+              periodSelect.value = 1;
+
               buttonStart.style.display = `block`;
               buttonCancel.style.display = `none`;
         
               appData.blockStart();
      }
    }
-
 };
        const validate = target => {
               const placeholder = target.getAttribute('placeholder');
@@ -297,7 +294,7 @@ buttonStart.addEventListener('click', appData.start.bind(appData));
 
 buttonStart.addEventListener('click', appData.getCancel);
 
-buttonCancel.addEventListener('click', appData.reset); 
+buttonCancel.addEventListener('click', appData.reset.bind(appData)); 
 
 
 
