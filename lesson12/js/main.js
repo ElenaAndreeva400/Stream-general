@@ -62,13 +62,11 @@ let appData = {
        this.getAddExpenses();  // создаем массив appData.addExpenses ВОЗМОЖНЫЕ РАСХОДЫ
        this.getAddIncome();  // создаем массив appData.addIncome НАИМЕНОВАНИЯ ВОЗМОЖНЫЕ ДОХОДЫ
        this.getBudget(); // budgetMonth и budgetDay
-       this.getCancel();
-
+ 
        this.showResult(); 
    },
    getCancel: function() {
-       const _this = this;
-       const changeButtons = e => {
+
               if(event.target.closest('#start')) {
                      buttonStart.style.display = `none`;  // Рассчитать исчезает
                      buttonCancel.style.display = `block`; // появляется Сбросить
@@ -76,15 +74,13 @@ let appData = {
                            item.setAttribute('readonly', 1);   // блокируем inputs
                            item.style.cssText = `cursor: not-allowed`;
                            
-                     });
+                     });  
+                                   
+              }
 
-                     buttonCancel.addEventListener('click', _this.reset); 
-       
-       }
-};   
-       document.addEventListener('click', changeButtons);
+       // document.addEventListener('click', this.getCancel);
+  
    },
-
    blockStart: function() {
 
        buttonStart.setAttribute('disabled', 1);
@@ -228,30 +224,51 @@ let appData = {
        return this.budgetMonth * periodSelect.value;
     },
     reset: function() {
-      
+   
             if(event.target.closest('#cancel')){
-              buttonStart.style.display = `block`;
-              buttonCancel.style.display = `none`;
+              this.budget = 0; 
+              console.log(this.budget);    
+              this.budgetDay=0; 
+              console.log(this.budgetDay);      
+              this.budgetMonth = 0;
+              console.log(this.budgetMonth);
+              this.expensesMonth = 0;
+              console.log(this.expensesMonth);
+              this.income = 0;  
+              console.log(this.income);    
+              this.income = {};  
+              console.log(this.income);    
+              this.incomeMonth = 0;
+              console.log(this.incomeMonth);
+              this.addIncome = 0;
+              console.log(this.addIncome);
+              this.addIncome = [];
+              console.log(this.addIncome);
+              this.expenses =0;
+              console.log(this.expenses);    
+              this.expenses = {}; 
+              console.log(this.expenses);     
+              this.addExpenses =0; 
+              console.log(this.addExpenses);     
+              this.addExpenses = [];
+              console.log(this.addExpenses);      
+              this.deposit = 0;
+              console.log(this.deposit);    
+              this.percentDeposit = 0;
+              console.log(this.percentDeposit);    
+              this.moneyDeposit = 0;
+              console.log(this.moneyDeposit);    
+
               inputs.forEach(item => {
                      item.removeAttribute('readonly');
                      item.value = '';
                      item.style.cssText =`cursor: default`;
                      });
-       
-              this.budget = 0;     
-              this.budgetDay=0;   
-              this.budgetMonth = 0;
-              this.expensesMonth = 0;  
-              this.income = {};  
-              this.incomeMonth = 0;
-              this.addIncome = [];  
-              this.expenses = {};    
-              this.addExpenses = [];  
-              this.deposit = 0;
-              this.percentDeposit = 0;
-              this.moneyDeposit = 0;
-       buttonStart.style.display = `block`;
-       buttonCancel.style.display = `none`;
+         
+              buttonStart.style.display = `block`;
+              buttonCancel.style.display = `none`;
+        
+              appData.blockStart();
      }
    }
 
@@ -278,9 +295,9 @@ appData.periodChange();
 
 buttonStart.addEventListener('click', appData.start.bind(appData));
 
+buttonStart.addEventListener('click', appData.getCancel);
 
-
-
+buttonCancel.addEventListener('click', appData.reset); 
 
 
 
